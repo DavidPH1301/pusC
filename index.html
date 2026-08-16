@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>PLATO TMTC ICD</title>
+<title>Packet Utilization Services</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css\icdStyles.css">
@@ -15,100 +15,139 @@
       <strong>ECSS-E-ST-70-41C-Rev.1</strong>
       <p>Telemetry and telecommand Packet Utilization Services (PUS)</p>
     </div>
-    <div class="grid-item item2">  <img src="ECSS_Logo.JPG" width="160" height="100"></div>
-    <div class="grid-item item3"><i>Generated 07/jun/2026</i></div>
+    <div class="grid-item item2">  <img src="ECSS_Logo.jpg" alt="PLATO" width="160" height="100"></div>
   </div>
 </header>
 
-<script src="js\tmtcicd_src.js">
+<script src="js\tmtcicd.js">
 </script> 
 
 <section>
   <nav>
     <ul>
-      <button class="stype">SERVICE 1 - request verification</button>
+      <button class="stype">ST[01] - request verification</button>
       <div class="panel">
-        <button class="sstype" onclick="updateArticle(1,1)">TM(1,1)</button>
-        <button class="sstype" onclick="updateArticle(1,2)">TM(1,2)</button>
-        <button class="sstype" onclick="updateArticle(1,7)">TM(1,7)</button>
-        <button class="sstype" onclick="updateArticle(1,8)">TM(1,8)</button>
+        <button class="sstype" onclick="updateArticle(1,1)">TM[1,1]</button>
+        <button class="sstype" onclick="updateArticle(1,2)">TM[1,2]</button>
+        <button class="sstype" onclick="updateArticle(1,7)">TM[1,7]</button>
+        <button class="sstype" onclick="updateArticle(1,8)">TM[1,8]</button>
       </div>    
-      <button class="stype">SERVICE 2 - device access</button>
+      <button class="stype">ST[02] - device access</button>
       <div class="panel">
-        <button class="sstype" onclick="updateArticle(2,4)">TC(2,4)</button>
-        <button class="sstype" onclick="updateArticle(2,128)">TM(2,128)</button>
+        <button class="sstype" onclick="updateArticle(2,1)">TC[2,1]</button>
       </div>    
-      <button class="stype">SERVICE 3 - housekeeping</button>
+      <button class="stype">ST[03] - housekeeping</button>
       <div class="panel">
-        <button class="sstype" onclick="updateArticle(3,1)">TC(3,1)</button>
-        <button class="sstype" onclick="updateArticle(3,25)">TM(3,25)</button>
+        <button class="sstype" onclick="updateArticle(3,1)">TC[3,1]</button>
+        <button class="sstype" onclick="updateArticle(3,25)">TM[3,25]</button>
       </div>    
-      <button class="stype">SERVICE 5 - event reporting</button>
+      <button class="stype">ST[04] - parameter statistics reporting</button>
       <div class="panel">
-        <button class="sstype" onclick="updateArticle(5,1)">TM(5,1)</button>
-        <button class="sstype" onclick="updateArticle(5,2)">TM(5,2)</button>
-        <button class="sstype" onclick="updateArticle(5,3)">TM(5,3)</button>
-        <button class="sstype" onclick="updateArticle(5,4)">TM(5,4)</button>
+        <p>TC[4,1]</p>
+        <p>TM[4,2]</p>
       </div>    
-      <button class="stype">SERVICE 6 - memory management</button>
+      <button class="stype">ST[05] - event reporting</button>
       <div class="panel">
-        <button class="sstype" onclick="showPacketTags()">TC(6,1)</button>
-        <button class="sstype" onclick="showPacketTags()">TM(6,2)</button>
+        <button class="sstype" onclick="updateArticle(5,1)">TM[5,1]</button>
+        <button class="sstype" onclick="updateArticle(5,2)">TM[5,2]</button>
+        <button class="sstype" onclick="updateArticle(5,3)">TM[5,3]</button>
+        <button class="sstype" onclick="updateArticle(5,4)">TM[5,4]</button>
       </div>    
-      <button class="stype">SERVICE 9 - time management</button>
+      <button class="stype">ST[06] - memory management</button>
       <div class="panel">
-        <p>TC(9,1)</p>
-        <p>TM(9,2)</p>
+        <button class="sstype" onclick="showPacketTags()">TC[6,1]</button>
+        <button class="sstype" onclick="showPacketTags()">TC[6,2]</button>
+        <button class="sstype" onclick="showPacketTags()">TC[6,3]</button>
+        <button class="sstype" onclick="showPacketTags()">TM[6,4]</button>
+        <button class="sstype" onclick="showPacketTags()">TC[6,5]</button>
+        <button class="sstype" onclick="showPacketTags()">TM[6,6]</button>
       </div>    
-      <button class="stype">SERVICE 11 - mission timeline</button>
+      <button class="stype">ST[09] - time management</button>
       <div class="panel">
-        <p>TC(11,1)</p>
-        <p>TM(11,2)</p>
+        <p>TC[9,1]</p>
+        <p>TM[9,2]</p>
+        <p>TM[9,3]</p>
       </div>    
-      <button class="stype">SERVICE 12 - monitoring service</button>
+      <button class="stype">ST[11] - time-based scheduling</button>
       <div class="panel">
-        <p>TC(12,1)</p>
-        <p>TM(12,2)</p>
+        <p>TC[11,1]</p>
+        <p>TC[11,2]</p>
       </div>    
-      <button class="stype">SERVICE 14 - real time telemetry</button>
+      <button class="stype">ST[12] - on-board monitoring</button>
       <div class="panel">
-        <p>TC(14,1)</p>
-        <p>TM(14,2)</p>
+        <p>TC[12,1]</p>
+        <p>TC[12,2]</p>
       </div>    
-      <button class="stype">SERVICE 15 - deferred telemetry</button>
+      <button class="stype">ST[13] - large packet transfer</button>
       <div class="panel">
-        <p>TC(15,1)</p>
-        <p>TM(15,2)</p>
+        <p>TM[13,1]</p>
+        <p>TM[13,2]</p>
+        <p>TM[13,3]</p>
       </div>    
-      <button class="stype">SERVICE 17 - test service</button>
+      <button class="stype">ST[14] - real-time forward control</button>
       <div class="panel">
-        <p>TC(17,1)</p>
-        <p>TM(17,2)</p>
+        <p>TC[14,1]</p>
+        <p>TM[14,2]</p>
       </div>    
-      <button class="stype">SERVICE 18 - on-board control</button>
+      <button class="stype">ST[15] - on-baord storage and retrieval</button>
       <div class="panel">
-        <p>TC(18,1)</p>
-        <p>TM(18,2)</p>
+        <p>TC[15,1]</p>
+        <p>TC[15,2]</p>
       </div>    
-      <button class="stype">SERVICE 19 - action management</button>
+      <button class="stype">ST[17] - test</button>
       <div class="panel">
-        <p>TC(19,1)</p>
-        <p>TM(19,2)</p>
+        <p>TC[17,1]</p>
+        <p>TM[17,2]</p>
       </div>    
-      <button class="stype">SERVICE 20 - parameter managmnt</button>
+      <button class="stype">ST[18] - on-board control procedure</button>
       <div class="panel">
-        <p>TC(20,1)</p>
-        <p>TM(20,2)</p>
+        <p>TC[18,1]</p>
+        <p>TC[18,2]</p>
       </div>    
-      <button class="stype">SERVICE 21 - request sequencing</button>
+      <button class="stype">ST[19] - event-action</button>
       <div class="panel">
-        <p>TC(21,1)</p>
-        <p>TM(21,2)</p>
+        <p>TC[19,1]</p>
+        <p>TC[19,2]</p>
       </div>    
-      <button class="stype">SERVICE 23 - file management</button>
+      <button class="stype">ST[20] - parameter management</button>
       <div class="panel">
-        <p>TC(23,1)</p>
-        <p>TM(23,2)</p>
+        <p>TC[20,1]</p>
+        <p>TM[20,2]</p>
+      </div>    
+      <button class="stype">ST[21] - request sequencing</button>
+      <div class="panel">
+        <p>TC[21,1]</p>
+        <p>TM[21,2]</p>
+      </div>    
+      <button class="stype">ST[22] - position-based scheduling</button>
+      <div class="panel">
+        <p>TC[22,1]</p>
+        <p>TM[22,2]</p>
+      </div>    
+      <button class="stype">ST[23] - file management</button>
+      <div class="panel">
+        <p>TC[23,1]</p>
+        <p>TC[23,2]</p>
+      </div>    
+      <button class="stype">ST[24] - file transfer</button>
+      <div class="panel">
+        <p>TC[24,1]</p>
+        <p>TC[24,2]</p>
+      </div>    
+      <button class="stype">ST[25] - file data storage</button>
+      <div class="panel">
+        <p>TC[25,1]</p>
+        <p>TC[25,2]</p>
+      </div>    
+      <button class="stype">ST[26] - parameter extraction</button>
+      <div class="panel">
+        <p>TC[26,1]</p>
+        <p>TC[26,2]</p>
+      </div>    
+      <button class="stype">ST[27] - critical packet log</button>
+      <div class="panel">
+        <p>TC[27,1]</p>
+        <p>TC[27,2]</p>
       </div>    
     </ul>
   </nav>
@@ -122,7 +161,7 @@
 <footer>
   <p id="footer"></p>
   <script>
-    const d = "Telemetry and telecommand Packet Utilization Services (PUS)";
+    const d = "Generated 07/jun/2026";
     document.getElementById("footer").innerHTML = d;
   </script>
 </footer>

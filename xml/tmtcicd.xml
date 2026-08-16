@@ -3,119 +3,69 @@
 <tmtcicd>
 
 <packet category="telemetry">
-  <name lang="en">TM_1_1_Acceptance_Success</name>
+  <name lang="en">TM[1,1] successful acceptance verification report</name>
   <type>1</type>
   <stype>1</stype>
-  <apids>APID_General_OBDH</apids>
   <description>This packet reports successful acceptance of a TC packet.</description>
 </packet>
 
 <packet category="telemetry">
-  <name lang="en">TM_1_2_Acceptance_Failure</name>
+  <name lang="en">TM[1,2] failed acceptance verification report</name>
   <type>1</type>
   <stype>2</stype>
-  <apids>APID_General_OBDH</apids>
   <description>This packet reports failed acceptance of a TC packet.</description>
   <parameter>
     <param-name>Failure Code</param-name>
     <param-type>UINT</param-type>
     <param-len>32</param-len>
-    <param-desc>Identifies a failure within the TC addressed by this verification report</param-desc>
+    <param-desc>Identifies a failure within the TC addressed by the acceptance verification report</param-desc>
   </parameter>
 </packet>
 
 <packet category="telemetry">
-  <name lang="en">TM_1_7_Completion_Success</name>
+  <name lang="en">TM[1,7] successful completion of request execution verification report</name>
   <type>1</type>
   <stype>7</stype>
-  <apids>APID_General_OBDH</apids>
   <description>This packet reports successful completion of execution of a TC packet.</description>
 </packet>
 
 <packet category="telemetry">
-  <name lang="en">TM_1_8_Completion_Failure</name>
+  <name lang="en">TM[1,8] failed completion of request execution verification report</name>
   <type>1</type>
   <stype>8</stype>
-  <apids>APID_General_OBDH</apids>
   <description>This packet reports failed completion of execution of a TC packet.</description>
   <parameter>
-    <param-name>Number of Failures (N)</param-name>
-    <param-type>UINT</param-type>
-    <param-len>16</param-len>
-    <param-desc>Number of Failures.</param-desc>
-  </parameter>
-  <parameter>
-    <param-name>N x Failure Code</param-name>
+    <param-name>Failure Code</param-name>
     <param-type>UINT</param-type>
     <param-len>32</param-len>
-    <param-desc>Identifies the failures within the TC addressed by this verification report.</param-desc>
-  </parameter>
-  <parameter>
-    <param-name>N x Instruction Number</param-name>
-    <param-type>UINT</param-type>
-    <param-len>32</param-len>
-    <param-desc>Contains the value of the verification state instruction number counter at the time when the failure was marked. Debug use only.</param-desc>
+    <param-desc>Identifies a failure within the TC addressed by the execution verification report</param-desc>
   </parameter>
 </packet>
 
 <packet category="telecommand">
-  <name lang="en">TC_2_4_Dist_CPDU_Cmds</name>
+  <name lang="en">TC[2,1] distribute on/off device commands</name>
   <type>2</type>
-  <stype>4</stype>
-  <apids>APID_General_OBDH</apids>
-  <description>Distribute CPDU commands. CPDU ID indicates on which (or both) CPDU modules the CPDU execution is attempted. Execution is only attempted on active CPDU modules.</description>
+  <stype>1</stype>
+  <description>Distribute On/Off commands.</description>
   <parameter>
     <param-name>Number of Commands (N)</param-name>
     <param-type>UINT</param-type>
     <param-len>16</param-len>
-    <param-desc>Number of Commands.</param-desc>
+    <param-desc>Number of Commands</param-desc>
   </parameter>
   <parameter>
-    <param-name>N x CPDU_ID</param-name>
+    <param-name>N x Commands</param-name>
     <param-type>ENUM</param-type>
     <param-len>32</param-len>
-    <param-desc>Identifier of the Command Pulse. Calibration: Enum_CPDU_ID.</param-desc>
+    <param-desc>Identifier of the Command</param-desc>
   </parameter>
 </packet>
 
 <packet category="telecommand">
-  <name lang="en">TC_2_128_Dist_MIL_Bus_Messages</name>
-  <type>2</type>
-  <stype>128</stype>
-  <apids>APID_General_OBDH</apids>
-  <description>Distribute 1553B messages.The provided 1553B messages are transmitted in order.</description>
-  <parameter>
-    <param-name>1553B bus ID</param-name>
-    <param-type>ENUM</param-type>
-    <param-len>8</param-len>
-    <param-desc>1553B bus identifier</param-desc>
-  </parameter>
-  <parameter>
-    <param-name>Number of Messages (N)</param-name>
-    <param-type>UINT</param-type>
-    <param-len>16</param-len>
-    <param-desc>Number of 1553B Messages.</param-desc>
-  </parameter>
-  <parameter>
-    <param-name>N x Transaction_ID</param-name>
-    <param-type>ENUM</param-type>
-    <param-len>16</param-len>
-    <param-desc>Transaction identifier.</param-desc>
-  </parameter>
-  <parameter>
-    <param-name>N x Command Word</param-name>
-    <param-type>UINT</param-type>
-    <param-len>16</param-len>
-    <param-desc>1553B message's command word.</param-desc>
-  </parameter>
-</packet>
-
-<packet category="telecommand">
-  <name lang="en">TC_3_1_Create_HK_Struct</name>
+  <name lang="en">TC[3,1] create a housekeeping parameter report structure</name>
   <type>3</type>
   <stype>1</stype>
-  <apids>APID_General_OBDH</apids>
-  <description>Create a housekeeping parameter report structure.</description>
+  <description>Create a housekeeping parameter report structure</description>
   <parameter>
     <param-name>HK Structure ID</param-name>
     <param-type>UINT</param-type>
@@ -137,11 +87,10 @@
 </packet>
 
 <packet category="telemetry">
-  <name lang="en">TM_3_25_HK_Param_Report</name>
+  <name lang="en">TM[3,25] housekeeping parameter report</name>
   <type>3</type>
   <stype>25</stype>
-  <apids>APID_PUS_03_HK_High_Prio, APID_PUS_03_HK_Low_Prio</apids>
-  <description>The housekeeping parameter report contains a set of housekeeping parameter values from the data pool.</description>
+  <description>Housekeeping parameter report containing a set of housekeeping parameters</description>
   <parameter>
     <param-name>HK Structure ID</param-name>
     <param-type>UINT</param-type>

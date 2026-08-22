@@ -17,8 +17,7 @@ function loadXMLDoc()
   xmlhttp.send();
   var xmlDoc = xmlhttp.responseXML;
 
-  document.getElementById("packet-name").innerHTML = '<strong>NAME: </strong>' + 'none';
-  document.getElementById("packet-apid").innerHTML = '<strong>APIDs: </strong>' + 'none';
+  document.getElementById("packet-name").innerHTML = '<strong>PACKET: </strong>' + 'none';
   document.getElementById("packet-desc").innerHTML = '<strong>DESCRIPTION: </strong>' + 'none';
  
   resetParameterContent();  
@@ -39,7 +38,7 @@ function updateArticle(type, stype)
 
     if ((pktType == type)&&(pktSubtype == stype))
     {  
-      document.getElementById("packet-name").innerHTML = '<strong>NAME: </strong>' + pktList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+      document.getElementById("packet-name").innerHTML = '<strong>PACKET: </strong>' + pktList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
       document.getElementById("packet-desc").innerHTML = '<strong>DESCRIPTION: </strong>' + pktList[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
       
       // TODO: here check the number of parameters and add a row for each. This is the case of no parameters (none)

@@ -3,10 +3,18 @@
 }
 
 :root {
-  --main-bg-color: rgb(165, 217, 247);
-  --main-frm-color: #323252;
-  --main-txt-color: #323252;
-  --main-pkt-color: #c4ecf5;
+  --main-bg-color: #bed5eb;
+  --main-nav-color: #1e1e66;
+  --main-frm-color: #192350;
+  --header-color: #394566;
+  --menu-txt-color: #b8e5f0;
+  --nav-color: #192850;
+  --nav-txt-color: #aed2db;
+  --pkt-bg-color: #fafcf8;
+  --border-color: #a2aeaf;
+  --card-bg-color: #fafcf8;
+  --card-hdr-bg-color: #b8ceeb;
+  --card-txt-color: #0d085c;
 }
 
 body {
@@ -16,23 +24,23 @@ body {
 /* Style the grid */
 .grid-header {
   display: grid;
-  gap: 10px;
-  background-color: var(--main-frm-color);
-  padding: 10px;
-  font-size: 20px;
+  gap: 5px;
+  background-color: var(--header-color);
+  padding: 5px;
+  font-size: 10px;
 }
 
 .grid-item {
-  background-color: var(--main-bg-color);
+  background-color: var(--header-color);
   text-align: left;
   padding: 10px;
   font-family: 'Verdana';
-  font-size: 20px;
-  color: var(--main-txt-color);
+  font-size: 10px;
+  color: var(--menu-txt-color);
 }
 
 .item1 {
-  font-size: 25px;
+  font-size: 20px;
   grid-column: 1 / span 4;
   grid-row: 1;
 }
@@ -54,8 +62,8 @@ body {
 }
 
 .stype, .sstype {
-  background-color: var(--main-bg-color);
-  color: var(--main-txt-color);
+  background-color: var(--nav-color);
+  color: var(--nav-txt-color);
   cursor: pointer;
   padding: 10px;
   width: 100%;
@@ -78,28 +86,48 @@ body {
 .panel {
   padding: 0 30px;
   display: none;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-frm-color);
   font-family: 'Verdana';
   font-size: 15px;
   overflow: hidden;
 }
 
+.page-header {
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.page-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.page-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
 /* Style the header */
 header {
-  background-color: var(--main-frm-color);
+  background-color: var(--header-color);
   padding: 10px;
   text-align: center;
-  font-size: 25px;
+  font-size: 10px;
 }
 
 /* Create two columns/boxes that floats next to each other */
 nav {
-  background-color: var(--main-bg-color);
+  background-color: var(--nav-color);
   float: left;
   padding: 20px;
   width: 25%;
   height: 600px;
   word-wrap: break-word;
+  margin-right: 20px;
   overflow-x: auto; /* Show horizontal scrollbars */ 
   overflow-y: auto; /* Show vertical scrollbars */ 
 }
@@ -110,9 +138,35 @@ nav ul {
   padding: 0;
 }
 
-/* this could be also an article { */
+/* Style the card */
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
+  margin-left: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.card-header {
+  padding: 5px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--card-hdr-bg-color);
+}
+.card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--card-txt-color);
+}
+.card-body {
+  padding: 10px;
+}
+
+        
+/*** Packet ***/
 .packet-info {
-  background-color: var(--main-pkt-color);
+  background-color: var(--pkt-bg-color);
   padding: 10px;
   float: left;
   width: 75%;
@@ -129,13 +183,13 @@ nav ul {
   padding: 5px;
   float: left;
   width: 75%;
-  height: 600px;
+  height: 300px;
   align-content: flex-start;
   overflow-y: auto; /* Show vertical scrollbars */ 
 }
 
 .grid-cell {
-  background-color: var(--main-pkt-color);
+  background-color: var(--pkt-bg-color);
   text-align: left;
   padding: 10px;
   font-size: 15px;
@@ -216,14 +270,6 @@ section::after {
   content: "";
   display: table;
   clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: var(--main-frm-color);
-  padding: 10px;
-  text-align: center;
-  color: var(--main-pkt-color);
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */

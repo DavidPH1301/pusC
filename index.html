@@ -12,39 +12,81 @@
 <header>
   <div class="grid-header">
     <div class="grid-item item1">
-      <strong>ECSS-E-ST-70-41C-Rev.1</strong>
-      <p>Telemetry and telecommand Packet Utilization Services (PUS)</p>
+      <strong>ECSS-E-ST-70-41C rev.1</strong>
+      <p>Telemetry and Telecommand Packet Utilization Services (PUS)</p>
     </div>
-    <div class="grid-item item2">  <img src="ECSS_Logo.JPG" width="160" height="100"></div>
   </div>
 </header>
 
-<script src="js\tmtcicd.js">
-</script> 
-
 <section>
+  <!-- Navigation Info -->
   <nav>
     <ul>
       <button class="stype">ST[01] - request verification</button>
       <div class="panel">
         <button class="sstype" onclick="updateArticle(1,1)">TM[1,1]</button>
         <button class="sstype" onclick="updateArticle(1,2)">TM[1,2]</button>
+        <button class="sstype" onclick="updateArticle(1,3)">TM[1,3]</button>
+        <button class="sstype" onclick="updateArticle(1,4)">TM[1,4]</button>
+        <button class="sstype" onclick="updateArticle(1,5)">TM[1,5]</button>
+        <button class="sstype" onclick="updateArticle(1,6)">TM[1,6]</button>
         <button class="sstype" onclick="updateArticle(1,7)">TM[1,7]</button>
         <button class="sstype" onclick="updateArticle(1,8)">TM[1,8]</button>
+        <button class="sstype" onclick="updateArticle(1,10)">TM[1,10]</button>
       </div>    
       <button class="stype">ST[02] - device access</button>
       <div class="panel">
         <button class="sstype" onclick="updateArticle(2,1)">TC[2,1]</button>
+        <button class="sstype" onclick="updateArticle(2,2)">TC[2,2]</button>
+        <button class="sstype" onclick="updateArticle(2,4)">TC[2,4]</button>
+        <button class="sstype" onclick="updateArticle(2,5)">TC[2,5]</button>
+        <button class="sstype" onclick="updateArticle(2,6)">TM[2,6]</button>
+        <button class="sstype" onclick="updateArticle(2,7)">TC[2,7]</button>
+        <button class="sstype" onclick="updateArticle(2,8)">TC[2,8]</button>
+        <button class="sstype" onclick="updateArticle(2,9)">TM[2,9]</button>
+        <button class="sstype" onclick="updateArticle(2,10)">TC[2,10]</button>
+        <button class="sstype" onclick="updateArticle(2,11)">TC[2,11]</button>
+        <button class="sstype" onclick="updateArticle(2,12)">TM[2,12]</button>
       </div>    
       <button class="stype">ST[03] - housekeeping</button>
       <div class="panel">
         <button class="sstype" onclick="updateArticle(3,1)">TC[3,1]</button>
+        <button class="sstype" onclick="updateArticle(3,3)">TC[3,3]</button>
+        <button class="sstype" onclick="updateArticle(3,5)">TC[3,5]</button>
+        <button class="sstype" onclick="updateArticle(3,6)">TC[3,6]</button>
+        <button class="sstype" onclick="updateArticle(3,9)">TC[3,9]</button>
+        <button class="sstype" onclick="updateArticle(3,10)">TM[3,10]</button>
+        <button class="sstype" onclick="updateArticle(3,27)">TC[3,27]</button>
+        <button class="sstype" onclick="updateArticle(3,29)">TC[3,29]</button>
+        <button class="sstype" onclick="updateArticle(3,31)">TC[3,31]</button>
+        <button class="sstype" onclick="updateArticle(3,33)">TC[3,33]</button>
+        <button class="sstype" onclick="updateArticle(3,34)">TM[3,34]</button>
+        <button class="sstype" onclick="updateArticle(3,37)">TC[3,37]</button>
+        <button class="sstype" onclick="updateArticle(3,38)">TC[3,38]</button>
+        <button class="sstype" onclick="updateArticle(3,39)">TC[3,39]</button>
+        <button class="sstype" onclick="updateArticle(3,40)">TC[3,40]</button>
+        <button class="sstype" onclick="updateArticle(3,41)">TM[3,41]</button>
+        <button class="sstype" onclick="updateArticle(3,42)">TC[3,42]</button>
+        <button class="sstype" onclick="updateArticle(3,43)">TC[3,43]</button>
+        <button class="sstype" onclick="updateArticle(3,44)">TC[3,44]</button>
         <button class="sstype" onclick="updateArticle(3,25)">TM[3,25]</button>
+        <button class="sstype" onclick="updateArticle(3,26)">TM[3,26]</button>
+        <button class="sstype" onclick="updateArticle(3,50)">TM[3,50]</button>
+        <button class="sstype" onclick="updateArticle(3,51)">TM[3,51]</button>
+        <button class="sstype" onclick="updateArticle(3,52)">TM[3,52]</button>
+        <button class="sstype" onclick="updateArticle(3,53)">TM[3,53]</button>
       </div>    
       <button class="stype">ST[04] - parameter statistics reporting</button>
       <div class="panel">
-        <p>TC[4,1]</p>
-        <p>TM[4,2]</p>
+        <button class="sstype" onclick="updateArticle(4,1)">TC[4,1]</button>
+        <button class="sstype" onclick="updateArticle(4,2)">TM[4,2]</button>
+        <button class="sstype" onclick="updateArticle(4,3)">TC[4,3]</button>
+        <button class="sstype" onclick="updateArticle(4,4)">TC[4,4]</button>
+        <button class="sstype" onclick="updateArticle(4,5)">TC[4,5]</button>
+        <button class="sstype" onclick="updateArticle(4,6)">TC[4,6]</button>
+        <button class="sstype" onclick="updateArticle(4,7)">TC[4,7]</button>
+        <button class="sstype" onclick="updateArticle(4,8)">TC[4,8]</button>
+        <button class="sstype" onclick="updateArticle(4,9)">TM[4,9]</button>
       </div>    
       <button class="stype">ST[05] - event reporting</button>
       <div class="panel">
@@ -52,119 +94,411 @@
         <button class="sstype" onclick="updateArticle(5,2)">TM[5,2]</button>
         <button class="sstype" onclick="updateArticle(5,3)">TM[5,3]</button>
         <button class="sstype" onclick="updateArticle(5,4)">TM[5,4]</button>
+        <button class="sstype" onclick="updateArticle(5,5)">TC[5,5]</button>
+        <button class="sstype" onclick="updateArticle(5,6)">TC[5,6]</button>
+        <button class="sstype" onclick="updateArticle(5,7)">TC[5,7]</button>
+        <button class="sstype" onclick="updateArticle(5,8)">TM[5,8]</button>
+        <button class="sstype" onclick="updateArticle(5,9)">TC[5,9]</button>
       </div>    
       <button class="stype">ST[06] - memory management</button>
       <div class="panel">
-        <button class="sstype" onclick="showPacketTags()">TC[6,1]</button>
-        <button class="sstype" onclick="showPacketTags()">TC[6,2]</button>
-        <button class="sstype" onclick="showPacketTags()">TC[6,3]</button>
-        <button class="sstype" onclick="showPacketTags()">TM[6,4]</button>
-        <button class="sstype" onclick="showPacketTags()">TC[6,5]</button>
-        <button class="sstype" onclick="showPacketTags()">TM[6,6]</button>
+        <button class="sstype" onclick="updateArticle(6,1)">TC[6,1]</button>
+        <button class="sstype" onclick="updateArticle(6,2)">TC[6,2]</button>
+        <button class="sstype" onclick="updateArticle(6,3)">TC[6,3]</button>
+        <button class="sstype" onclick="updateArticle(6,4)">TM[6,4]</button>
+        <button class="sstype" onclick="updateArticle(6,5)">TC[6,5]</button>
+        <button class="sstype" onclick="updateArticle(6,6)">TM[6,6]</button>
+        <button class="sstype" onclick="updateArticle(6,7)">TC[6,7]</button>
+        <button class="sstype" onclick="updateArticle(6,8)">TM[6,8]</button>
+        <button class="sstype" onclick="updateArticle(6,9)">TC[6,9]</button>
+        <button class="sstype" onclick="updateArticle(6,10)">TM[6,10]</button>
+        <button class="sstype" onclick="updateArticle(6,11)">TC[6,11]</button>
+        <button class="sstype" onclick="updateArticle(6,12)">TC[6,12]</button>
+        <button class="sstype" onclick="updateArticle(6,13)">TC[6,13]</button>
+        <button class="sstype" onclick="updateArticle(6,14)">TC[6,14]</button>
+        <button class="sstype" onclick="updateArticle(6,15)">TC[6,15]</button>
+        <button class="sstype" onclick="updateArticle(6,16)">TC[6,16]</button>
+        <button class="sstype" onclick="updateArticle(6,17)">TC[6,17]</button>
+        <button class="sstype" onclick="updateArticle(6,18)">TM[6,18]</button>
+        <button class="sstype" onclick="updateArticle(6,19)">TC[6,19]</button>
+        <button class="sstype" onclick="updateArticle(6,20)">TC[6,20]</button>
+        <button class="sstype" onclick="updateArticle(6,21)">TC[6,21]</button>
+        <button class="sstype" onclick="updateArticle(6,22)">TC[6,22]</button>
       </div>    
       <button class="stype">ST[09] - time management</button>
       <div class="panel">
-        <p>TC[9,1]</p>
-        <p>TM[9,2]</p>
-        <p>TM[9,3]</p>
+        <button class="sstype" onclick="updateArticle(9,1)">TC[9,1]</button>
+        <button class="sstype" onclick="updateArticle(9,2)">TM[9,2]</button>
+        <button class="sstype" onclick="updateArticle(9,3)">TM[9,3]</button>
+        <button class="sstype" onclick="updateArticle(9,4)">TC[9,4]</button>
+        <button class="sstype" onclick="updateArticle(9,5)">TC[9,5]</button>
+        <button class="sstype" onclick="updateArticle(9,6)">TC[9,6]</button>
+        <button class="sstype" onclick="updateArticle(9,7)">TC[9,7]</button>
       </div>    
       <button class="stype">ST[11] - time-based scheduling</button>
       <div class="panel">
-        <p>TC[11,1]</p>
-        <p>TC[11,2]</p>
+        <button class="sstype" onclick="updateArticle(11,1)">TC[11,1]</button>
+        <button class="sstype" onclick="updateArticle(11,2)">TC[11,2]</button>
+        <button class="sstype" onclick="updateArticle(11,3)">TC[11,3]</button>
+        <button class="sstype" onclick="updateArticle(11,4)">TC[11,4]</button>
+        <button class="sstype" onclick="updateArticle(11,5)">TC[11,5]</button>
+        <button class="sstype" onclick="updateArticle(11,6)">TC[11,6]</button>
+        <button class="sstype" onclick="updateArticle(11,7)">TC[11,7]</button>
+        <button class="sstype" onclick="updateArticle(11,8)">TC[11,8]</button>
+        <button class="sstype" onclick="updateArticle(11,9)">TC[11,9]</button>
+        <button class="sstype" onclick="updateArticle(11,10)">TM[11,10]</button>
+        <button class="sstype" onclick="updateArticle(11,11)">TC[11,11]</button>
+        <button class="sstype" onclick="updateArticle(11,12)">TC[11,12]</button>
+        <button class="sstype" onclick="updateArticle(11,13)">TM[11,13]</button>
+        <button class="sstype" onclick="updateArticle(11,14)">TC[11,14]</button>
+        <button class="sstype" onclick="updateArticle(11,15)">TC[11,15]</button>
+        <button class="sstype" onclick="updateArticle(11,16)">TC[11,16]</button>
+        <button class="sstype" onclick="updateArticle(11,17)">TC[11,17]</button>
+        <button class="sstype" onclick="updateArticle(11,18)">TC[11,18]</button>
+        <button class="sstype" onclick="updateArticle(11,19)">TM[11,19]</button>
+        <button class="sstype" onclick="updateArticle(11,20)">TC[11,20]</button>
+        <button class="sstype" onclick="updateArticle(11,21)">TC[11,21]</button>
+        <button class="sstype" onclick="updateArticle(11,22)">TC[11,22]</button>
+        <button class="sstype" onclick="updateArticle(11,23)">TC[11,23]</button>
+        <button class="sstype" onclick="updateArticle(11,24)">TC[11,24]</button>
+        <button class="sstype" onclick="updateArticle(11,25)">TC[11,25]</button>
+        <button class="sstype" onclick="updateArticle(11,26)">TC[11,26]</button>
+        <button class="sstype" onclick="updateArticle(11,27)">TM[11,27]</button>
       </div>    
       <button class="stype">ST[12] - on-board monitoring</button>
       <div class="panel">
-        <p>TC[12,1]</p>
-        <p>TC[12,2]</p>
+        <button class="sstype" onclick="updateArticle(12,1)">TC[12,1]</button>
+        <button class="sstype" onclick="updateArticle(12,2)">TC[12,2]</button>
+        <button class="sstype" onclick="updateArticle(12,3)">TC[12,3]</button>
+        <button class="sstype" onclick="updateArticle(12,4)">TC[12,4]</button>
+        <button class="sstype" onclick="updateArticle(12,5)">TC[12,5]</button>
+        <button class="sstype" onclick="updateArticle(12,6)">TC[12,6]</button>
+        <button class="sstype" onclick="updateArticle(12,7)">TC[12,7]</button>
+        <button class="sstype" onclick="updateArticle(12,8)">TC[12,8]</button>
+        <button class="sstype" onclick="updateArticle(12,9)">TM[12,9]</button>
+        <button class="sstype" onclick="updateArticle(12,10)">TC[12,10]</button>
+        <button class="sstype" onclick="updateArticle(12,11)">TM[12,11]</button>
+        <button class="sstype" onclick="updateArticle(12,12)">TM[12,12]</button>
+        <button class="sstype" onclick="updateArticle(12,13)">TC[12,13]</button>
+        <button class="sstype" onclick="updateArticle(12,14)">TM[12,14]</button>
+        <button class="sstype" onclick="updateArticle(12,15)">TC[12,15]</button>
+        <button class="sstype" onclick="updateArticle(12,16)">TC[12,16]</button>
+        <button class="sstype" onclick="updateArticle(12,17)">TC[12,17]</button>
+        <button class="sstype" onclick="updateArticle(12,18)">TC[12,18]</button>
+        <button class="sstype" onclick="updateArticle(12,19)">TC[12,19]</button>
+        <button class="sstype" onclick="updateArticle(12,20)">TC[12,20]</button>
+        <button class="sstype" onclick="updateArticle(12,21)">TC[12,21]</button>
+        <button class="sstype" onclick="updateArticle(12,22)">TC[12,22]</button>
+        <button class="sstype" onclick="updateArticle(12,23)">TC[12,23]</button>
+        <button class="sstype" onclick="updateArticle(12,24)">TC[12,24]</button>
+        <button class="sstype" onclick="updateArticle(12,25)">TC[12,25]</button>
+        <button class="sstype" onclick="updateArticle(12,26)">TM[12,26]</button>
+        <button class="sstype" onclick="updateArticle(12,27)">TC[12,27]</button>
+        <button class="sstype" onclick="updateArticle(12,28)">TM[12,28]</button>
+        <button class="sstype" onclick="updateArticle(12,29)">TC[12,29]</button>
+        <button class="sstype" onclick="updateArticle(12,30)">TC[12,30]</button>
       </div>    
       <button class="stype">ST[13] - large packet transfer</button>
       <div class="panel">
-        <p>TM[13,1]</p>
-        <p>TM[13,2]</p>
-        <p>TM[13,3]</p>
+        <button class="sstype" onclick="updateArticle(13,1)">TM[13,1]</button>
+        <button class="sstype" onclick="updateArticle(13,2)">TM[13,2]</button>
+        <button class="sstype" onclick="updateArticle(13,3)">TM[13,3]</button>
+        <button class="sstype" onclick="updateArticle(13,9)">TC[13,9]</button>
+        <button class="sstype" onclick="updateArticle(13,10)">TC[13,10]</button>
+        <button class="sstype" onclick="updateArticle(13,11)">TC[13,11]</button>
+        <button class="sstype" onclick="updateArticle(13,16)">TM[13,16]</button>
       </div>    
       <button class="stype">ST[14] - real-time forward control</button>
       <div class="panel">
-        <p>TC[14,1]</p>
-        <p>TM[14,2]</p>
+        <button class="sstype" onclick="updateArticle(14,1)">TC[14,1]</button>
+        <button class="sstype" onclick="updateArticle(14,2)">TC[14,2]</button>
+        <button class="sstype" onclick="updateArticle(14,3)">TC[14,3]</button>
+        <button class="sstype" onclick="updateArticle(14,4)">TM[14,4]</button>
+        <button class="sstype" onclick="updateArticle(14,5)">TC[14,5]</button>
+        <button class="sstype" onclick="updateArticle(14,6)">TC[14,6]</button>
+        <button class="sstype" onclick="updateArticle(14,7)">TC[14,7]</button>
+        <button class="sstype" onclick="updateArticle(14,8)">TM[14,8]</button>
+        <button class="sstype" onclick="updateArticle(14,13)">TC[14,13]</button>
+        <button class="sstype" onclick="updateArticle(14,14)">TC[14,14]</button>
+        <button class="sstype" onclick="updateArticle(14,15)">TC[14,15]</button>
+        <button class="sstype" onclick="updateArticle(14,16)">TM[14,16]</button>
       </div>    
-      <button class="stype">ST[15] - on-baord storage and retrieval</button>
+      <button class="stype">ST[15] - on-board storage and retrieval</button>
       <div class="panel">
-        <p>TC[15,1]</p>
-        <p>TC[15,2]</p>
+        <button class="sstype" onclick="updateArticle(15,1)">TC[15,1]</button>
+        <button class="sstype" onclick="updateArticle(15,2)">TC[15,2]</button>
+        <button class="sstype" onclick="updateArticle(15,3)">TC[15,3]</button>
+        <button class="sstype" onclick="updateArticle(15,4)">TC[15,4]</button>
+        <button class="sstype" onclick="updateArticle(15,5)">TC[15,5]</button>
+        <button class="sstype" onclick="updateArticle(15,6)">TM[15,6]</button>
+        <button class="sstype" onclick="updateArticle(15,9)">TC[15,9]</button>
+        <button class="sstype" onclick="updateArticle(15,10)">TC[15,10]</button>
+        <button class="sstype" onclick="updateArticle(15,11)">TC[15,11]</button>
+        <button class="sstype" onclick="updateArticle(15,12)">TC[15,12]</button>
+        <button class="sstype" onclick="updateArticle(15,13)">TM[15,13]</button>
+        <button class="sstype" onclick="updateArticle(15,14)">TC[15,14]</button>
+        <button class="sstype" onclick="updateArticle(15,15)">TC[15,15]</button>
+        <button class="sstype" onclick="updateArticle(15,16)">TC[15,16]</button>
+        <button class="sstype" onclick="updateArticle(15,17)">TC[15,17]</button>
+        <button class="sstype" onclick="updateArticle(15,18)">TC[15,18]</button>
+        <button class="sstype" onclick="updateArticle(15,19)">TM[15,19]</button>
+        <button class="sstype" onclick="updateArticle(15,20)">TC[15,20]</button>
+        <button class="sstype" onclick="updateArticle(15,21)">TC[15,21]</button>
+        <button class="sstype" onclick="updateArticle(15,22)">TC[15,22]</button>
+        <button class="sstype" onclick="updateArticle(15,23)">TM[15,23]</button>
+        <button class="sstype" onclick="updateArticle(15,24)">TC[15,24]</button>
+        <button class="sstype" onclick="updateArticle(15,25)">TC[15,25]</button>
+        <button class="sstype" onclick="updateArticle(15,26)">TC[15,26]</button>
+        <button class="sstype" onclick="updateArticle(15,27)">TC[15,27]</button>
+        <button class="sstype" onclick="updateArticle(15,28)">TC[15,28]</button>
+        <button class="sstype" onclick="updateArticle(15,29)">TC[15,29]</button>
+        <button class="sstype" onclick="updateArticle(15,30)">TC[15,30]</button>
+        <button class="sstype" onclick="updateArticle(15,33)">TC[15,33]</button>
+        <button class="sstype" onclick="updateArticle(15,34)">TC[15,34]</button>
+        <button class="sstype" onclick="updateArticle(15,35)">TC[15,35]</button>
+        <button class="sstype" onclick="updateArticle(15,36)">TM[15,36]</button>
+        <button class="sstype" onclick="updateArticle(15,39)">TC[15,39]</button>
+        <button class="sstype" onclick="updateArticle(15,40)">TM[15,40]</button>
+        <button class="sstype" onclick="updateArticle(15,41)">TC[15,41]</button>
       </div>    
       <button class="stype">ST[17] - test</button>
       <div class="panel">
-        <p>TC[17,1]</p>
-        <p>TM[17,2]</p>
+        <button class="sstype" onclick="updateArticle(17,1)">TC[17,1]</button>
+        <button class="sstype" onclick="updateArticle(17,2)">TM[17,2]</button>
+        <button class="sstype" onclick="updateArticle(17,3)">TC[17,3]</button>
+        <button class="sstype" onclick="updateArticle(17,4)">TM[17,4]</button>
+        <button class="sstype" onclick="updateArticle(17,5)">TC[17,5]</button>
+        <button class="sstype" onclick="updateArticle(17,6)">TM[17,6]</button>
       </div>    
       <button class="stype">ST[18] - on-board control procedure</button>
       <div class="panel">
-        <p>TC[18,1]</p>
-        <p>TC[18,2]</p>
+        <button class="sstype" onclick="updateArticle(18,1)">TC[18,1]</button>
+        <button class="sstype" onclick="updateArticle(18,2)">TC[18,2]</button>
+        <button class="sstype" onclick="updateArticle(18,3)">TC[18,3]</button>
+        <button class="sstype" onclick="updateArticle(18,4)">TC[18,4]</button>
+        <button class="sstype" onclick="updateArticle(18,5)">TC[18,5]</button>
+        <button class="sstype" onclick="updateArticle(18,6)">TC[18,6]</button>
+        <button class="sstype" onclick="updateArticle(18,7)">TC[18,7]</button>
+        <button class="sstype" onclick="updateArticle(18,8)">TC[18,8]</button>
+        <button class="sstype" onclick="updateArticle(18,9)">TM[18,9]</button>
+        <button class="sstype" onclick="updateArticle(18,12)">TC[18,12]</button>
+        <button class="sstype" onclick="updateArticle(18,13)">TC[18,13]</button>
+        <button class="sstype" onclick="updateArticle(18,14)">TC[18,14]</button>
+        <button class="sstype" onclick="updateArticle(18,15)">TC[18,15]</button>
+        <button class="sstype" onclick="updateArticle(18,16)">TC[18,16]</button>
+        <button class="sstype" onclick="updateArticle(18,17)">TC[18,17]</button>
+        <button class="sstype" onclick="updateArticle(18,18)">TM[18,18]</button>
+        <button class="sstype" onclick="updateArticle(18,19)">TC[18,19]</button>
+        <button class="sstype" onclick="updateArticle(18,20)">TC[18,20]</button>
+        <button class="sstype" onclick="updateArticle(18,21)">TC[18,21]</button>
+        <button class="sstype" onclick="updateArticle(18,22)">TC[18,22]</button>
       </div>    
       <button class="stype">ST[19] - event-action</button>
       <div class="panel">
-        <p>TC[19,1]</p>
-        <p>TC[19,2]</p>
+        <button class="sstype" onclick="updateArticle(19,1)">TC[19,1]</button>
+        <button class="sstype" onclick="updateArticle(19,2)">TC[19,2]</button>
+        <button class="sstype" onclick="updateArticle(19,3)">TC[19,3]</button>
+        <button class="sstype" onclick="updateArticle(19,4)">TC[19,4]</button>
+        <button class="sstype" onclick="updateArticle(19,5)">TC[19,5]</button>
+        <button class="sstype" onclick="updateArticle(19,6)">TC[19,6]</button>
+        <button class="sstype" onclick="updateArticle(19,7)">TM[19,7]</button>
+        <button class="sstype" onclick="updateArticle(19,8)">TC[19,8]</button>
+        <button class="sstype" onclick="updateArticle(19,9)">TC[19,9]</button>
+        <button class="sstype" onclick="updateArticle(19,10)">TC[19,10]</button>
+        <button class="sstype" onclick="updateArticle(19,11)">TM[19,11]</button>
       </div>    
       <button class="stype">ST[20] - parameter management</button>
       <div class="panel">
-        <p>TC[20,1]</p>
-        <p>TM[20,2]</p>
+        <button class="sstype" onclick="updateArticle(20,1)">TC[20,1]</button>
+        <button class="sstype" onclick="updateArticle(20,2)">TM[20,2]</button>
+        <button class="sstype" onclick="updateArticle(20,3)">TC[20,3]</button>
+        <button class="sstype" onclick="updateArticle(20,4)">TC[20,4]</button>
+        <button class="sstype" onclick="updateArticle(20,5)">TC[20,5]</button>
+        <button class="sstype" onclick="updateArticle(20,6)">TC[20,6]</button>
+        <button class="sstype" onclick="updateArticle(20,7)">TM[20,7]</button>
       </div>    
       <button class="stype">ST[21] - request sequencing</button>
       <div class="panel">
-        <p>TC[21,1]</p>
-        <p>TM[21,2]</p>
+        <button class="sstype" onclick="updateArticle(21,1)">TC[21,1]</button>
+        <button class="sstype" onclick="updateArticle(21,2)">TC[21,2]</button>
+        <button class="sstype" onclick="updateArticle(21,3)">TC[21,3]</button>
+        <button class="sstype" onclick="updateArticle(21,4)">TC[21,4]</button>
+        <button class="sstype" onclick="updateArticle(21,5)">TC[21,5]</button>
+        <button class="sstype" onclick="updateArticle(21,6)">TC[21,6]</button>
+        <button class="sstype" onclick="updateArticle(21,7)">TM[21,7]</button>
+        <button class="sstype" onclick="updateArticle(21,8)">TC[21,8]</button>
+        <button class="sstype" onclick="updateArticle(21,9)">TC[21,9]</button>
+        <button class="sstype" onclick="updateArticle(21,10)">TM[21,10]</button>
+        <button class="sstype" onclick="updateArticle(21,11)">TC[21,11]</button>
+        <button class="sstype" onclick="updateArticle(21,12)">TM[21,12]</button>
+        <button class="sstype" onclick="updateArticle(21,13)">TC[21,13]</button>
+        <button class="sstype" onclick="updateArticle(21,14)">TM[21,14]</button>
+        <button class="sstype" onclick="updateArticle(21,15)">TC[21,15]</button>
+        <button class="sstype" onclick="updateArticle(21,16)">TC[21,16]</button>
+        <button class="sstype" onclick="updateArticle(21,17)">TM[21,17]</button>
       </div>    
       <button class="stype">ST[22] - position-based scheduling</button>
       <div class="panel">
-        <p>TC[22,1]</p>
-        <p>TM[22,2]</p>
+        <button class="sstype" onclick="updateArticle(22,1)">TC[22,1]</button>
+        <button class="sstype" onclick="updateArticle(22,2)">TC[22,2]</button>
+        <button class="sstype" onclick="updateArticle(22,3)">TC[22,3]</button>
+        <button class="sstype" onclick="updateArticle(22,4)">TC[22,4]</button>
+        <button class="sstype" onclick="updateArticle(22,5)">TC[22,5]</button>
+        <button class="sstype" onclick="updateArticle(22,6)">TC[22,6]</button>
+        <button class="sstype" onclick="updateArticle(22,7)">TC[22,7]</button>
+        <button class="sstype" onclick="updateArticle(22,8)">TC[22,8]</button>
+        <button class="sstype" onclick="updateArticle(22,9)">TC[22,9]</button>
+        <button class="sstype" onclick="updateArticle(22,10)">TM[22,10]</button>
+        <button class="sstype" onclick="updateArticle(22,11)">TC[22,11]</button>
+        <button class="sstype" onclick="updateArticle(22,12)">TC[22,12]</button>
+        <button class="sstype" onclick="updateArticle(22,13)">TM[22,13]</button>
+        <button class="sstype" onclick="updateArticle(22,14)">TC[22,14]</button>
+        <button class="sstype" onclick="updateArticle(22,15)">TC[22,15]</button>
+        <button class="sstype" onclick="updateArticle(22,16)">TC[22,16]</button>
+        <button class="sstype" onclick="updateArticle(22,17)">TC[22,17]</button>
+        <button class="sstype" onclick="updateArticle(22,18)">TC[22,18]</button>
+        <button class="sstype" onclick="updateArticle(22,19)">TM[22,19]</button>
+        <button class="sstype" onclick="updateArticle(22,20)">TC[22,20]</button>
+        <button class="sstype" onclick="updateArticle(22,21)">TC[22,21]</button>
+        <button class="sstype" onclick="updateArticle(22,22)">TC[22,22]</button>
+        <button class="sstype" onclick="updateArticle(22,23)">TC[22,23]</button>
+        <button class="sstype" onclick="updateArticle(22,24)">TC[22,24]</button>
+        <button class="sstype" onclick="updateArticle(22,25)">TC[22,25]</button>
+        <button class="sstype" onclick="updateArticle(22,26)">TC[22,26]</button>
+        <button class="sstype" onclick="updateArticle(22,27)">TM[22,27]</button>
+        <button class="sstype" onclick="updateArticle(22,28)">TC[22,28]</button>
       </div>    
       <button class="stype">ST[23] - file management</button>
       <div class="panel">
-        <p>TC[23,1]</p>
-        <p>TC[23,2]</p>
+        <button class="sstype" onclick="updateArticle(23,1)">TC[23,1]</button>
+        <button class="sstype" onclick="updateArticle(23,2)">TC[23,2]</button>
+        <button class="sstype" onclick="updateArticle(23,3)">TC[23,3]</button>
+        <button class="sstype" onclick="updateArticle(23,4)">TM[23,4]</button>
+        <button class="sstype" onclick="updateArticle(23,5)">TC[23,5]</button>
+        <button class="sstype" onclick="updateArticle(23,6)">TC[23,6]</button>
+        <button class="sstype" onclick="updateArticle(23,7)">TC[23,7]</button>
+        <button class="sstype" onclick="updateArticle(23,8)">TM[23,8]</button>
+        <button class="sstype" onclick="updateArticle(23,9)">TC[23,9]</button>
+        <button class="sstype" onclick="updateArticle(23,10)">TC[23,10]</button>
+        <button class="sstype" onclick="updateArticle(23,11)">TC[23,11]</button>
+        <button class="sstype" onclick="updateArticle(23,12)">TC[23,12]</button>
+        <button class="sstype" onclick="updateArticle(23,13)">TM[23,13]</button>
+        <button class="sstype" onclick="updateArticle(23,14)">TC[23,14]</button>
+        <button class="sstype" onclick="updateArticle(23,15)">TC[23,15]</button>
+        <button class="sstype" onclick="updateArticle(23,16)">TC[23,16]</button>
+        <button class="sstype" onclick="updateArticle(23,17)">TC[23,17]</button>
+        <button class="sstype" onclick="updateArticle(23,18)">TC[23,18]</button>
+        <button class="sstype" onclick="updateArticle(23,19)">TC[23,19]</button>
+        <button class="sstype" onclick="updateArticle(23,20)">TC[23,20]</button>
+        <button class="sstype" onclick="updateArticle(23,21)">TC[23,21]</button>
+        <button class="sstype" onclick="updateArticle(23,22)">TC[23,22]</button>
+        <button class="sstype" onclick="updateArticle(23,23)">TM[23,23]</button>
+        <button class="sstype" onclick="updateArticle(23,24)">TC[23,24]</button>
+        <button class="sstype" onclick="updateArticle(23,25)">TC[23,25]</button>
+        <button class="sstype" onclick="updateArticle(23,26)">TM[23,26]</button>
+        <button class="sstype" onclick="updateArticle(23,27)">TC[23,27]</button>
+        <button class="sstype" onclick="updateArticle(23,28)">TC[23,28]</button>
       </div>    
       <button class="stype">ST[24] - file transfer</button>
       <div class="panel">
-        <p>TC[24,1]</p>
-        <p>TC[24,2]</p>
+        <button class="sstype" onclick="updateArticle(24,1)">TC[24,1]</button>
+        <button class="sstype" onclick="updateArticle(24,2)">TC[24,2]</button>
+        <button class="sstype" onclick="updateArticle(24,3)">TC[24,3]</button>
+        <button class="sstype" onclick="updateArticle(24,4)">TC[24,4]</button>
+        <button class="sstype" onclick="updateArticle(24,5)">TC[24,5]</button>
+        <button class="sstype" onclick="updateArticle(24,6)">TC[24,6]</button>
+        <button class="sstype" onclick="updateArticle(24,7)">TC[24,7]</button>
+        <button class="sstype" onclick="updateArticle(24,8)">TC[24,8]</button>
+        <button class="sstype" onclick="updateArticle(24,9)">TM[24,9]</button>
+        <button class="sstype" onclick="updateArticle(24,10)">TC[24,10]</button>
+        <button class="sstype" onclick="updateArticle(24,11)">TC[24,11]</button>
+        <button class="sstype" onclick="updateArticle(24,12)">TM[24,12]</button>
+        <button class="sstype" onclick="updateArticle(24,13)">TC[24,13]</button>
+        <button class="sstype" onclick="updateArticle(24,14)">TC[24,14]</button>
+        <button class="sstype" onclick="updateArticle(24,15)">TC[24,15]</button>
+        <button class="sstype" onclick="updateArticle(24,16)">TC[24,16]</button>
+        <button class="sstype" onclick="updateArticle(24,17)">TM[24,17]</button>
+        <button class="sstype" onclick="updateArticle(24,18)">TC[24,18]</button>
+        <button class="sstype" onclick="updateArticle(24,19)">TC[24,19]</button>
+        <button class="sstype" onclick="updateArticle(24,20)">TC[24,20]</button>
       </div>    
       <button class="stype">ST[25] - file data storage</button>
       <div class="panel">
-        <p>TC[25,1]</p>
-        <p>TC[25,2]</p>
+        <button class="sstype" onclick="updateArticle(25,1)">TC[25,1]</button>
+        <button class="sstype" onclick="updateArticle(25,2)">TC[25,2]</button>
+        <button class="sstype" onclick="updateArticle(25,3)">TM[25,3]</button>
+        <button class="sstype" onclick="updateArticle(25,4)">TC[25,4]</button>
+        <button class="sstype" onclick="updateArticle(25,5)">TC[25,5]</button>
+        <button class="sstype" onclick="updateArticle(25,6)">TC[25,6]</button>
+        <button class="sstype" onclick="updateArticle(25,7)">TM[25,7]</button>
+        <button class="sstype" onclick="updateArticle(25,8)">TC[25,8]</button>
+        <button class="sstype" onclick="updateArticle(25,9)">TM[25,9]</button>
+        <button class="sstype" onclick="updateArticle(25,10)">TC[25,10]</button>
+        <button class="sstype" onclick="updateArticle(25,11)">TC[25,11]</button>
+        <button class="sstype" onclick="updateArticle(25,12)">TC[25,12]</button>
+        <button class="sstype" onclick="updateArticle(25,13)">TC[25,13]</button>
+        <button class="sstype" onclick="updateArticle(25,14)">TC[25,14]</button>
+        <button class="sstype" onclick="updateArticle(25,15)">TC[25,15]</button>
+        <button class="sstype" onclick="updateArticle(25,16)">TM[25,16]</button>
       </div>    
       <button class="stype">ST[26] - parameter extraction</button>
       <div class="panel">
-        <p>TC[26,1]</p>
-        <p>TC[26,2]</p>
+        <button class="sstype" onclick="updateArticle(26,1)">TC[26,1]</button>
+        <button class="sstype" onclick="updateArticle(26,2)">TC[26,2]</button>
+        <button class="sstype" onclick="updateArticle(26,3)">TC[26,3]</button>
+        <button class="sstype" onclick="updateArticle(26,4)">TM[26,4]</button>
       </div>    
       <button class="stype">ST[27] - critical packet log</button>
       <div class="panel">
-        <p>TC[27,1]</p>
-        <p>TC[27,2]</p>
+        <button class="sstype" onclick="updateArticle(27,1)">TC[27,1]</button>
+        <button class="sstype" onclick="updateArticle(27,2)">TC[27,2]</button>
       </div>    
     </ul>
   </nav>
   
-  <div class="grid-paramtable" id="paramtable">
-    <div class="grid-cell cell-PktName" id="packet-name"><strong>NAME: </strong>This is the name of the packet</div>
-    <div class="grid-cell cell-PktDescription" id="packet-desc"><strong>DESCRIPTION: </strong>This is the description of the packet</div>
-  </div> 
+  <!-- Packet Info -->
+  <div class="page-header">
+    <div>
+      <h3>Packet structure</h3>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h3>CCSDS space packet</h3>
+    </div>
+    <div class="card-body">
+      <div>TBD</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h3>PUS telecomand packet secondary header</h3>
+    </div>
+    <div class="card-body">
+      <div>TBD</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h3>PUS telemetry packet secondary header</h3>
+    </div>
+    <div class="card-body">
+      <div>TBD</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h3>Data field</h3>
+    </div>
+    <div class="card-body">
+      <div class="grid-cell cell-PktName" id="packet-name"><strong>PACKET: </strong>type, subtype and name of the packet</div>
+      <div class="grid-cell cell-PktDescription" id="packet-desc"><strong>DESCRIPTION: </strong>description of the packet data field</div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p id="footer"></p>
-  <script>
-    const d = "Generated 07/jun/2026";
-    document.getElementById("footer").innerHTML = d;
-  </script>
-</footer>
+<script src="js\tmtcicd.js">
+</script> 
 
 <script>
   var accStype = document.getElementsByClassName("stype");

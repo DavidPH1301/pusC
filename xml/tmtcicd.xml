@@ -2,15 +2,19 @@
 
 <tmtcicd>
 
+
+<!-- // SERVICE 1                      -->
+<!-- ///////////////////////////////// -->
+
 <packet category="telemetry">
-  <name lang="en">TM[1,1] successful acceptance verification report</name>
+  <name>TM[1,1] successful acceptance verification report</name>
   <type>1</type>
   <stype>1</stype>
   <description>This packet reports successful acceptance of a TC packet.</description>
 </packet>
 
 <packet category="telemetry">
-  <name lang="en">TM[1,2] failed acceptance verification report</name>
+  <name>TM[1,2] failed acceptance verification report</name>
   <type>1</type>
   <stype>2</stype>
   <description>This packet reports failed acceptance of a TC packet.</description>
@@ -23,14 +27,42 @@
 </packet>
 
 <packet category="telemetry">
-  <name lang="en">TM[1,7] successful completion of request execution verification report</name>
+  <name>TM[1,3] successful start of request execution verification report</name>
+  <type>1</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[1,4] failed start of request execution verification report</name>
+  <type>1</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[1,5] successful progress of request execution verification report</name>
+  <type>1</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[1,6] failed progress of request execution verification report</name>
+  <type>1</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[1,7] successful completion of request execution verification report</name>
   <type>1</type>
   <stype>7</stype>
   <description>This packet reports successful completion of execution of a TC packet.</description>
 </packet>
 
 <packet category="telemetry">
-  <name lang="en">TM[1,8] failed completion of request execution verification report</name>
+  <name>TM[1,8] failed completion of request execution verification report</name>
   <type>1</type>
   <stype>8</stype>
   <description>This packet reports failed completion of execution of a TC packet.</description>
@@ -42,11 +74,27 @@
   </parameter>
 </packet>
 
+<packet category="telemetry">
+  <name>TM[1,10] failed routing verification report</name>
+  <type>1</type>
+  <stype>10</stype>
+  <description>This packet reports failed routing of a TC packet.</description>
+  <parameter>
+    <param-name>Failure Code</param-name>
+    <param-type>UINT</param-type>
+    <param-len>32</param-len>
+    <param-desc>Identifies a failure within the TC addressed by the execution verification report</param-desc>
+  </parameter>
+</packet>
+
+<!-- // SERVICE 2                      -->
+<!-- ///////////////////////////////// -->
+
 <packet category="telecommand">
-  <name lang="en">TC[2,1] distribute on/off device commands</name>
+  <name>TC[2,1] distribute on/off device commands</name>
   <type>2</type>
   <stype>1</stype>
-  <description>Distribute On/Off commands.</description>
+  <description>TBD</description>
   <parameter>
     <param-name>Number of Commands (N)</param-name>
     <param-type>UINT</param-type>
@@ -62,7 +110,80 @@
 </packet>
 
 <packet category="telecommand">
-  <name lang="en">TC[3,1] create a housekeeping parameter report structure</name>
+  <name>TC[2,2] distribute register load commands</name>
+  <type>2</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[2,4] distribute CPDU commands</name>
+  <type>2</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[2,5] distribute register dump commands</name>
+  <type>2</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[2,6] register dump report</name>
+  <type>2</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[2,7] distribute physical device commands</name>
+  <type>2</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[2,8] acquire data from physical devices</name>
+  <type>2</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[2,9] physical device data report</name>
+  <type>2</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[2,10] distribute logical device commands</name>
+  <type>2</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[2,11] acquire data from logical devices</name>
+  <type>2</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[2,12] logical device data report</name>
+  <type>2</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 3                      -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[3,1] create a housekeeping parameter report structure</name>
   <type>3</type>
   <stype>1</stype>
   <description>Create a housekeeping parameter report structure</description>
@@ -86,8 +207,134 @@
   </parameter>
 </packet>
 
+<packet category="telecommand">
+  <name>TC[3,3] delete housekeeping parameter report structures</name>
+  <type>3</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,5] enable the periodic generation of housekeeping parameter reports</name>
+  <type>3</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,6] disable the periodic generation of housekeeping parameter reports</name>
+  <type>3</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,9] report housekeeping parameter report structures</name>
+  <type>3</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+
 <packet category="telemetry">
-  <name lang="en">TM[3,25] housekeeping parameter report</name>
+  <name>TM[3,10] housekeeping parameter report structure report</name>
+  <type>3</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,27] generate a one shot report for housekeeping parameter report structures</name>
+  <type>3</type>
+  <stype>27</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,29] append parameters to a housekeeping parameter report structure</name>
+  <type>3</type>
+  <stype>29</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,31] modify the collection interval of housekeeping parameter report structures</name>
+  <type>3</type>
+  <stype>31</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,33] report the periodic generation properties of housekeeping parameter report structures</name>
+  <type>3</type>
+  <stype>33</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[3,34] housekeeping parameter report periodic generation properties report</name>
+  <type>3</type>
+  <stype>34</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,37] apply parameter functional reporting configurations</name>
+  <type>3</type>
+  <stype>37</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,38] create a parameter functional reporting definition</name>
+  <type>3</type>
+  <stype>38</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,39] delete parameter functional reporting definitions</name>
+  <type>3</type>
+  <stype>39</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,40] report parameter functional reporting definitions</name>
+  <type>3</type>
+  <stype>40</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[3,41] parameter functional reporting definition report</name>
+  <type>3</type>
+  <stype>41</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,42] add parameter report definitions to a parameter functional reporting definition</name>
+  <type>3</type>
+  <stype>42</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,43] remove parameter report definitions from a parameter functional reporting definition</name>
+  <type>3</type>
+  <stype>43</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[3,44] modify the periodic generation properties of parameter report definitions of a parameter functional reporting definition</name>
+  <type>3</type>
+  <stype>44</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[3,25] housekeeping parameter report</name>
   <type>3</type>
   <stype>25</stype>
   <description>Housekeeping parameter report containing a set of housekeeping parameters</description>
@@ -104,5 +351,2056 @@
     <param-desc>A set of housekeeping parameter values deduced from the Structure_ID.</param-desc>
   </parameter>
 </packet>
+
+<packet category="telemetry">
+  <name>TM[3,26] category 2 housekeeping parameter report</name>
+  <type>3</type>
+  <stype>26</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[3,50] category 3 housekeeping parameter report</name>
+  <type>3</type>
+  <stype>50</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[3,51] category 4 housekeeping parameter report</name>
+  <type>3</type>
+  <stype>51</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[3,52] category 5 housekeeping parameter report</name>
+  <type>3</type>
+  <stype>52</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[3,53] category 6 housekeeping parameter report</name>
+  <type>3</type>
+  <stype>53</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 4                      -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[4,1] report the parameter statistics</name>
+  <type>4</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[4,2] parameter statistics report</name>
+  <type>4</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[4,3] reset the parameter statistics</name>
+  <type>4</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[4,4] enable the periodic parameter statistics reporting</name>
+  <type>4</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[4,5] disable the periodic parameter statistics reporting</name>
+  <type>4</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[4,6] add or update parameter statistics definitions</name>
+  <type>4</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[4,7] delete parameter statistics definitions</name>
+  <type>4</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[4,8] report the parameter statistics definitions</name>
+  <type>4</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[4,9] parameter statistics definition report</name>
+  <type>4</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 5                      -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telemetry">
+  <name>TM[5,1] informative event report</name>
+  <type>5</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[5,2] low severity anomaly report</name>
+  <type>5</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[5,3] medium severity anomaly report</name>
+  <type>5</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[5,4] High severity anomaly report</name>
+  <type>5</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[5,5] enable the report generation of event definitions</name>
+  <type>5</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[5,6] disable the report generation of event definitions</name>
+  <type>5</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[5,7] report the list of disabled event definitions</name>
+  <type>5</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[5,8] disabled event definitions list report</name>
+  <type>5</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[5,9] generate event report</name>
+  <type>5</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 6                      -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[6,1] load object memory data</name>
+  <type>6</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,2] load raw memory data areas</name>
+  <type>6</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,3] dump object memory data</name>
+  <type>6</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[6,4] dumped object memory data report</name>
+  <type>6</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,5] dump raw memory data</name>
+  <type>6</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[6,6] dumped raw memory data report</name>
+  <type>6</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,7] check object memory data</name>
+  <type>6</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[6,8] checked object memory data report</name>
+  <type>6</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,9] check raw memory data</name>
+  <type>6</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[6,10] checked raw memory data report</name>
+  <type>6</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,11] load a raw memory atomic data area in a non-interruptible transaction</name>
+  <type>6</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,12] abort all memory dumps</name>
+  <type>6</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,13] enable the scrubbing of a memory</name>
+  <type>6</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,14] disable the scrubbing of a memory</name>
+  <type>6</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,15] enable the write protection of a memory</name>
+  <type>6</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,16] disable the write protection of a memory</name>
+  <type>6</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,17] check an object memory object</name>
+  <type>6</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telemetry">
+  <name>TM[6,18] checked object memory object report</name>
+  <type>6</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,19] load raw memory data areas by reference</name>
+  <type>6</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,20] dump raw memory data areas to file</name>
+  <type>6</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,21] load object memory data areas by reference</name>
+  <type>6</type>
+  <stype>21</stype>
+  <description>TBD</description>
+</packet>
+
+<packet category="telecommand">
+  <name>TC[6,22] dump object memory data areas to file</name>
+  <type>6</type>
+  <stype>22</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 9                      -->
+<!-- ///////////////////////////////// -->
+<packet category="telecommand">
+  <name>TC[9,1] set the time report generation rate</name>
+  <type>9</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[9,2] CUC time report</name>
+  <type>9</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[9,3] CDS time report</name>
+  <type>9</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[9,4] set the reference time with absolute time</name>
+  <type>9</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[9,5] set the reference time with relative time</name>
+  <type>9</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[9,6] start time distribution to on-board users</name>
+  <type>9</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[9,7] stop time distribution to on-board users</name>
+  <type>9</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 11                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[11,1] enable the time-based schedule execution function</name>
+  <type>11</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,2] disable the time-based schedule execution function</name>
+  <type>11</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,3] reset the time-based schedule</name>
+  <type>11</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,4] insert activities into the time-based schedule</name>
+  <type>11</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,5] delete time-based scheduled activities identified by request identifier</name>
+  <type>11</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,6] delete the time-based scheduled activities identified by a filter</name>
+  <type>11</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,7] time-shift scheduled activities identified by request identifier</name>
+  <type>11</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,8] time-shift the scheduled activities identified by a filter</name>
+  <type>11</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,9] detail-report time-based scheduled activities identified by request identifier</name>
+  <type>11</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[11,10] time-based schedule detail report</name>
+  <type>11</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,11] detail-report the time-based scheduled activities identified by a filter</name>
+  <type>11</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,12] summary-report time-based scheduled activities identified by request identifier</name>
+  <type>11</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[11,13] time-based schedule summary report</name>
+  <type>11</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,14] summary-report the time-based scheduled activities identified by a filter</name>
+  <type>11</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,15] time-shift all scheduled activities</name>
+  <type>11</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,16] detail-report all time-based scheduled activities</name>
+  <type>11</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,17] summary-report all time-based scheduled activities</name>
+  <type>11</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,18] report the status of each time-based sub-schedule</name>
+  <type>11</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[11,19] time-based sub-schedule status report</name>
+  <type>11</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,20] enable time-based sub-schedules</name>
+  <type>11</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,21] disable time-based sub-schedules</name>
+  <type>11</type>
+  <stype>21</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,22] create time-based scheduling groups</name>
+  <type>11</type>
+  <stype>22</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,23] delete time-based scheduling groups</name>
+  <type>11</type>
+  <stype>23</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,24] enable time-based scheduling groups</name>
+  <type>11</type>
+  <stype>24</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,25] disable time-based scheduling groups</name>
+  <type>11</type>
+  <stype>25</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[11,26] report the status of each time-based scheduling group</name>
+  <type>11</type>
+  <stype>26</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[11,27] time-based scheduling group status report</name>
+  <type>11</type>
+  <stype>27</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 12                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[12,1] enable parameter monitoring definitions</name>
+  <type>12</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,2] disable parameter monitoring definitions</name>
+  <type>12</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,3] change the maximum transition reporting delay</name>
+  <type>12</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,4] delete all parameter monitoring definitions</name>
+  <type>12</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,5] add parameter monitoring definitions</name>
+  <type>12</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,6] delete parameter monitoring definitions</name>
+  <type>12</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,7] modify parameter monitoring definitions</name>
+  <type>12</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,8] report parameter monitoring definitions</name>
+  <type>12</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[12,9] parameter monitoring definition report</name>
+  <type>12</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,10] report the current out-of-limits</name>
+  <type>12</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[12,11] current out-of-limits report</name>
+  <type>12</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[12,12] check transition report</name>
+  <type>12</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,13] report the status of each parameter monitoring definition</name>
+  <type>12</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[12,14] parameter monitoring definition status report</name>
+  <type>12</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,15] enable the parameter monitoring function</name>
+  <type>12</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,16] disable the parameter monitoring function</name>
+  <type>12</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,17] enable the functional monitoring function</name>
+  <type>12</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,18] disable the functional monitoring function</name>
+  <type>12</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,19] enable functional monitoring definitions</name>
+  <type>12</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,20] disable functional monitoring definitions</name>
+  <type>12</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,21] protect functional monitoring definitions</name>
+  <type>12</type>
+  <stype>21</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,22] unprotect functional monitoring definitions</name>
+  <type>12</type>
+  <stype>22</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,23] add functional monitoring definitions</name>
+  <type>12</type>
+  <stype>23</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,24] delete functional monitoring definitions</name>
+  <type>12</type>
+  <stype>24</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,25] report functional monitoring definitions</name>
+  <type>12</type>
+  <stype>25</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[12,26] functional monitoring definition report</name>
+  <type>12</type>
+  <stype>26</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,27] report the status of each functional monitoring definition</name>
+  <type>12</type>
+  <stype>27</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[12,28] functional monitoring definition status report</name>
+  <type>12</type>
+  <stype>28</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,29] enable check transition list logging</name>
+  <type>12</type>
+  <stype>29</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[12,30] disable check transition list logging</name>
+  <type>12</type>
+  <stype>30</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 13                     -->
+<!-- ///////////////////////////////// -->
+<packet category="telemetry">
+  <name>TM[13,1] first downlink part report</name>
+  <type>13</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[13,2] intermediate downlink part report</name>
+  <type>13</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[13,3] last downlink part report</name>
+  <type>13</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[13,9] uplink the first part</name>
+  <type>13</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[13,10] uplink an intermediate part</name>
+  <type>13</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[13,11] uplink the last part</name>
+  <type>13</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[13,16] large packet uplink abortion report</name>
+  <type>13</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 14                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[14,1] add report types to the application process forward-control configuration</name>
+  <type>14</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,2] delete report types from the application process forward-control configuration</name>
+  <type>14</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,3] report the content of the application process forward-control configuration</name>
+  <type>14</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[14,4] application process forward-control configuration content report</name>
+  <type>14</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,5] add structure identifiers to the housekeeping parameter report forward-control configuration</name>
+  <type>14</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,6] delete structure identifiers from the housekeeping parameter report forward-control configuration</name>
+  <type>14</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,7] report the content of the housekeeping parameter report forward-control configuration</name>
+  <type>14</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[14,8] housekeeping parameter report forward-control configuration content report</name>
+  <type>14</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,13] delete event definition identifiers from the event report blocking forward-control configuration</name>
+  <type>14</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,14] add event definition identifiers to the event report blocking forward-control configuration</name>
+  <type>14</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[14,15] report the content of the event report blocking forward-control configuration</name>
+  <type>14</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[14,16] event report blocking forward-control configuration content report</name>
+  <type>14</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 15                     -->
+<!-- ///////////////////////////////// -->
+<packet category="telecommand">
+  <name>TC[15,1] enable the storage function of packet stores</name>
+  <type>15</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,2] disable the storage function of packet stores</name>
+  <type>15</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,3] add report types to the application process storage-control configuration</name>
+  <type>15</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,4] delete report types from the application process storage-control configuration</name>
+  <type>15</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,5] report the content of the application process storage-control configuration</name>
+  <type>15</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[15,6] application process storage-control configuration content report</name>
+  <type>15</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,9] start the by-time-range retrieval of packet stores</name>
+  <type>15</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,10] Abort all requests to copy the packets contained in a packet store selected by time window</name>
+  <type>15</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,11] delete the content of packet stores up to the specified time</name>
+  <type>15</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,12] summary-report the content of packet stores</name>
+  <type>15</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[15,13] packet store content summary report</name>
+  <type>15</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,14] change the open retrieval start time tag of packet stores</name>
+  <type>15</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,15] resume the open retrieval of packet stores</name>
+  <type>15</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,16] suspend the open retrieval of packet stores</name>
+  <type>15</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,17] abort the by-time-range retrieval of packet stores</name>
+  <type>15</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,18] report the status of each packet store</name>
+  <type>15</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[15,19] packet store status report</name>
+  <type>15</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,20] create packet stores</name>
+  <type>15</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,21] delete packet stores</name>
+  <type>15</type>
+  <stype>21</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,22] report the configuration of each packet store</name>
+  <type>15</type>
+  <stype>22</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[15,23] packet store configuration report</name>
+  <type>15</type>
+  <stype>23</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,24] copy the packets contained in a packet store selected by time window</name>
+  <type>15</type>
+  <stype>24</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,25] resize packet stores</name>
+  <type>15</type>
+  <stype>25</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,26] change a packet store type to circular</name>
+  <type>15</type>
+  <stype>26</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,27] change a packet store type to bounded</name>
+  <type>15</type>
+  <stype>27</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,28] change the virtual channel used by a packet store</name>
+  <type>15</type>
+  <stype>28</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,29] add structure identifiers to the housekeeping parameter report storage-control configuration</name>
+  <type>15</type>
+  <stype>29</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,30] delete structure identifiers from the housekeeping parameter report storage-control configuration</name>
+  <type>15</type>
+  <stype>30</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,33] delete event definition identifiers from the event report blocking storage-control configuration</name>
+  <type>15</type>
+  <stype>33</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,34] add event definition identifiers to the event report blocking storage-control configuration</name>
+  <type>15</type>
+  <stype>34</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,35] report the content of the housekeeping parameter report storage-control configuration</name>
+  <type>15</type>
+  <stype>35</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[15,36] housekeeping parameter report storage-control configuration content report</name>
+  <type>15</type>
+  <stype>36</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,39] report the content of the event report blocking storage-control configuration</name>
+  <type>15</type>
+  <stype>39</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[15,40] event report blocking storage-control configuration content report</name>
+  <type>15</type>
+  <stype>40</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[15,41] change the default retrieval priority of a packet store</name>
+  <type>15</type>
+  <stype>41</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 17                     -->
+<!-- ///////////////////////////////// -->
+<packet category="telecommand">
+  <name>TC[17,1] perform an are-you-alive connection test</name>
+  <type>17</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[17,2] are-you-alive connection test report</name>
+  <type>17</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[17,3] perform an on-board connection test</name>
+  <type>17</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[17,4] on-board connection test report</name>
+  <type>17</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[17,5] perform a variable size are-you-alive connection test</name>
+  <type>17</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[17,6] are-you-alive variable size connection test report</name>
+  <type>17</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 18                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[18,1] direct-load an OBCP</name>
+  <type>18</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,2] unload OBCPs</name>
+  <type>18</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,3] activate an OBCP</name>
+  <type>18</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,4] stop an OBCP</name>
+  <type>18</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,5] suspend an OBCP</name>
+  <type>18</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,6] resume an OBCP</name>
+  <type>18</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,7] communicate parameters to an OBCP</name>
+  <type>18</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,8] report the execution status of each OBCP</name>
+  <type>18</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[18,9] OBCP execution status report</name>
+  <type>18</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,12] abort an OBCP</name>
+  <type>18</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,13] load an OBCP by reference</name>
+  <type>18</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,14] activate and execute one OBCP step</name>
+  <type>18</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,15] resume and execute one OBCP step</name>
+  <type>18</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,16] set the observability level of OBCPs</name>
+  <type>18</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,17] abort all OBCPs and report</name>
+  <type>18</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[18,18] aborted OBCP report</name>
+  <type>18</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,19] load by reference and activate an OBCP</name>
+  <type>18</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,20] stop and unload an OBCP</name>
+  <type>18</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,21] start the OBCP engine</name>
+  <type>18</type>
+  <stype>21</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[18,22] stop the OBCP engine</name>
+  <type>18</type>
+  <stype>22</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 19                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[19,1] add event-action definitions</name>
+  <type>19</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,2] delete event-action definitions</name>
+  <type>19</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,3] delete all event-action definitions</name>
+  <type>19</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,4] enable event-action definitions</name>
+  <type>19</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,5] disable event-action definitions</name>
+  <type>19</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,6] report the status of each event-action definition</name>
+  <type>19</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[19,7] event-action status report</name>
+  <type>19</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,8] enable the event-action function</name>
+  <type>19</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,9] disable the event-action function</name>
+  <type>19</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[19,10] report event-action definitions</name>
+  <type>19</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[19,11] event-action definition report</name>
+  <type>19</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 20                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[20,1] report parameter values</name>
+  <type>20</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[20,2] parameter value report</name>
+  <type>20</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[20,3] set parameter values</name>
+  <type>20</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[20,4] change raw memory parameter definitions</name>
+  <type>20</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[20,5] change object memory parameter definitions</name>
+  <type>20</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[20,6] report parameter definitions</name>
+  <type>20</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[20,7] parameter definition report</name>
+  <type>20</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 21                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[21,1] direct-load a request sequence</name>
+  <type>21</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,2] load a request sequence by reference</name>
+  <type>21</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,3] unload a request sequence</name>
+  <type>21</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,4] activate a request sequence</name>
+  <type>21</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,5] abort a request sequence</name>
+  <type>21</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,6] report the execution status of each request sequence</name>
+  <type>21</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[21,7] request sequence execution status report</name>
+  <type>21</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,8] load by reference and activate a request sequence</name>
+  <type>21</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,9] checksum a request sequence</name>
+  <type>21</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[21,10] request sequence checksum report</name>
+  <type>21</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,11] report the content of a request sequence</name>
+  <type>21</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[21,12] request sequence content report</name>
+  <type>21</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,13] abort all request sequences and report</name>
+  <type>21</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[21,14] aborted request sequence report</name>
+  <type>21</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,15] change request sequence directory attributes</name>
+  <type>21</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[21,16] report the attributes of a request sequence directory</name>
+  <type>21</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[21,17] request sequence directory attributes report</name>
+  <type>21</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 22                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[22,1] enable the position-based schedule execution function</name>
+  <type>22</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,2] disable the position-based schedule execution function</name>
+  <type>22</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,3] reset the position-based schedule</name>
+  <type>22</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,4] insert activities into the position-based schedule</name>
+  <type>22</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,5] delete position-based scheduled activities identified by request identifier</name>
+  <type>22</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,6] delete the position-based scheduled activities identified by a filter</name>
+  <type>22</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,7] position-shift scheduled activities identified by request identifier</name>
+  <type>22</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,8] position-shift the scheduled activities identified by a filter</name>
+  <type>22</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,9] detail-report position-based scheduled activities identified by request identifier</name>
+  <type>22</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[22,10] position-based schedule detail report</name>
+  <type>22</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,11] detail-report the position-based scheduled activities identified by a filter</name>
+  <type>22</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,12] summary-report position-based scheduled activities identified by request identifier</name>
+  <type>22</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[22,13] position-based schedule summary report</name>
+  <type>22</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,14] summary-report the position-based scheduled activities identified by a filter</name>
+  <type>22</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,15] position-shift all scheduled activities</name>
+  <type>22</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,16] detail-report all position-based scheduled activities</name>
+  <type>22</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,17] summary-report all position-based scheduled activities</name>
+  <type>22</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,18] report the status of each position-based sub-schedule</name>
+  <type>22</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[22,19] position-based sub-schedule status report</name>
+  <type>22</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,20] enable position-based sub-schedules</name>
+  <type>22</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,21] disable position-based sub-schedules</name>
+  <type>22</type>
+  <stype>21</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,22] create position-based scheduling groups</name>
+  <type>22</type>
+  <stype>22</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,23] delete position-based scheduling groups</name>
+  <type>22</type>
+  <stype>23</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,24] enable position-based scheduling groups</name>
+  <type>22</type>
+  <stype>24</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,25] disable position-based scheduling groups</name>
+  <type>22</type>
+  <stype>25</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,26] report the status of each position-based scheduling group</name>
+  <type>22</type>
+  <stype>26</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[22,27] position-based scheduling group status report</name>
+  <type>22</type>
+  <stype>27</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[22,28] set the orbit number</name>
+  <type>22</type>
+  <stype>28</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 23                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[23,1] create a file</name>
+  <type>23</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,2] delete a file</name>
+  <type>23</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,3] report the attributes of a file</name>
+  <type>23</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[23,4] file attribute report</name>
+  <type>23</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,5] lock a file</name>
+  <type>23</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,6] unlock a file</name>
+  <type>23</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,7] find files</name>
+  <type>23</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[23,8] found files report</name>
+  <type>23</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,9] create a directory</name>
+  <type>23</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,10] delete a directory</name>
+  <type>23</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,11] rename a directory</name>
+  <type>23</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,12] report the content of a repository</name>
+  <type>23</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[23,13] repository content report</name>
+  <type>23</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,14] copy a file</name>
+  <type>23</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,15] move a file</name>
+  <type>23</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,16] suspend file copy operations</name>
+  <type>23</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,17] resume file copy operations</name>
+  <type>23</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,18] abort file copy operations</name>
+  <type>23</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,19] suspend all file copy operations involving a repository path</name>
+  <type>23</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,20] resume all file copy operations involving a repository path</name>
+  <type>23</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,21] abort all file copy operations involving a repository path</name>
+  <type>23</type>
+  <stype>21</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,22] enable the periodic reporting of the file copy status</name>
+  <type>23</type>
+  <stype>22</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[23,23] file copy status report</name>
+  <type>23</type>
+  <stype>23</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,24] disable the periodic reporting of the file copy status</name>
+  <type>23</type>
+  <stype>24</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,25] request a file checksum</name>
+  <type>23</type>
+  <stype>25</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[23,26] checksum report of a file</name>
+  <type>23</type>
+  <stype>26</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,27] enable directory protection</name>
+  <type>23</type>
+  <stype>27</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[23,28] disable directory protection</name>
+  <type>23</type>
+  <stype>28</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 24                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[24,1] start of a file transmission opportunity window</name>
+  <type>24</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,2] stop of a file transmission opportunity window</name>
+  <type>24</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,3] start of a file reception opportunity window</name>
+  <type>24</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,4] stop of a file reception opportunity window</name>
+  <type>24</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,5] suspend a file transaction</name>
+  <type>24</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,6] resume a file transaction</name>
+  <type>24</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,7] cancel a file transaction</name>
+  <type>24</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,8] report status of file transactions</name>
+  <type>24</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[24,9] file transactions status report</name>
+  <type>24</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,10] modify local CFDP entity configuration for communication with a remote CFDP entity</name>
+  <type>24</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,11] report local CFDP entity configuration for communication with a remote CFDP entity</name>
+  <type>24</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[24,12] local CFDP entity configuration for communication with a remote CFDP entity report</name>
+  <type>24</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,13] modify downlink manager configuration</name>
+  <type>24</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,14] add directories to the downlink manager directory configuration</name>
+  <type>24</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,15] remove directories from the downlink manager directory configuration</name>
+  <type>24</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,16] report downlink manager configuration</name>
+  <type>24</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[24,17] downlink manager configuration report</name>
+  <type>24</type>
+  <stype>17</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,18] start downlink manager</name>
+  <type>24</type>
+  <stype>18</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,19] suspend downlink manager</name>
+  <type>24</type>
+  <stype>19</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[24,20] stop downlink manager</name>
+  <type>24</type>
+  <stype>20</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 25                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[25,1] set directory data storage attributes</name>
+  <type>25</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,2] report directory data storage attributes</name>
+  <type>25</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[25,3] directory data storage attributes report</name>
+  <type>25</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,4] add data sources to directory mapping</name>
+  <type>25</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,5] remove data sources from directory mapping</name>
+  <type>25</type>
+  <stype>5</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,6] report data sources to directory mapping</name>
+  <type>25</type>
+  <stype>6</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[25,7] data sources to directory mapping configuration report</name>
+  <type>25</type>
+  <stype>7</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,8] report data sources recording status</name>
+  <type>25</type>
+  <stype>8</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[25,9] data sources recording status report</name>
+  <type>25</type>
+  <stype>9</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,10] enable data sources recording status</name>
+  <type>25</type>
+  <stype>10</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,11] disable data sources recording status</name>
+  <type>25</type>
+  <stype>11</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,12] close file currently used for data storage</name>
+  <type>25</type>
+  <stype>12</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,13] add report-types to the application process PUS report-type data source control configuration</name>
+  <type>25</type>
+  <stype>13</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,14] delete report-types from the application process PUS report-type data source control configuration</name>
+  <type>25</type>
+  <stype>14</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[25,15] report the content of the application process PUS report-type data source control configuration</name>
+  <type>25</type>
+  <stype>15</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[25,16] application process PUS report-type data source control configuration content report</name>
+  <type>25</type>
+  <stype>16</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 26                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[26,1] add parameter extraction definitions</name>
+  <type>26</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[26,2] delete parameter extraction definitions</name>
+  <type>26</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[26,3] report parameter extraction definitions</name>
+  <type>26</type>
+  <stype>3</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telemetry">
+  <name>TM[26,4] parameter extraction definitions report</name>
+  <type>26</type>
+  <stype>4</stype>
+  <description>TBD</description>
+</packet>
+
+<!-- // SERVICE 27                     -->
+<!-- ///////////////////////////////// -->
+
+<packet category="telecommand">
+  <name>TC[27,1] downlink critical packet log</name>
+  <type>27</type>
+  <stype>1</stype>
+  <description>TBD</description>
+</packet>
+<packet category="telecommand">
+  <name>TC[27,2] clear downlinked packets from critical packet log</name>
+  <type>27</type>
+  <stype>2</stype>
+  <description>TBD</description>
+</packet>
+
 
 </tmtcicd>

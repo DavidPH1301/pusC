@@ -20,7 +20,7 @@
 
 <section>
   <!-- Navigation Info -->
-  <nav>
+  <nav class="scroll-nav">
     <ul>
       <button class="stype">ST[01] - request verification</button>
       <div class="panel">
@@ -456,43 +456,48 @@
     </ul>
   </nav>
   
-  <!-- Packet Info -->
-  <div class="page-header">
-    <div>
-      <h3>Packet structure</h3>
+  
+  <!-- Packet Area -->
+  <div class="packet-area">
+    <div class="page-header">
+      <div>
+        <h3>Packet structure</h3>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h3>CCSDS space packet</h3>
+    <div class="card">
+      <div class="card-header">
+        <h3>CCSDS space packet</h3>
+      </div>
+      <div class="card-body">
+        <img src="img/7-4 CCSDS space packet.png" alt="CCSDS space packet">
+      </div>
     </div>
-    <div class="card-body">
-      <div>TBD</div>
+    <div class="card">
+      <div class="card-header">
+        <h3>PUS Telecomand Packet</h3>
+      </div>
+      <div class="card-body">
+        <img src="img/7-4-3 PUS TC sec header.png" alt="PUS TC sec header">
+        <img src="img/7-4-3 PUS TC user data.png" alt="PUS TC user data">
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h3>PUS telecomand packet secondary header</h3>
+    <div class="card">
+      <div class="card-header">
+        <h3>PUS Telemetry Packet</h3>
+      </div>
+      <div class="card-body">
+        <img src="img/7-4-3 PUS TM sec header.png" alt="PUS TM sec header">
+        <img src="img/7-4-3 PUS TM user data.png" alt="PUS TM user data">
+      </div>
     </div>
-    <div class="card-body">
-      <div>TBD</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h3>PUS telemetry packet secondary header</h3>
-    </div>
-    <div class="card-body">
-      <div>TBD</div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header">
-      <h3>Data field</h3>
-    </div>
-    <div class="card-body">
-      <div class="grid-cell cell-PktName" id="packet-name"><strong>PACKET: </strong>type, subtype and name of the packet</div>
-      <div class="grid-cell cell-PktDescription" id="packet-desc"><strong>DESCRIPTION: </strong>description of the packet data field</div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Data field</h3>
+      </div>
+      <div class="card-body">
+        <div class="grid-cell cell-PktName" id="packet-name"><strong>PACKET: </strong>type, subtype and name of the packet</div>
+        <div class="grid-cell cell-PktDescription" id="packet-desc"><strong>DESCRIPTION: </strong>description of the packet data field</div>
+      </div>
     </div>
   </div>
 </section>

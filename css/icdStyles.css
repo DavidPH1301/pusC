@@ -5,11 +5,11 @@
 :root {
   --main-bg-color: #bed5eb;
   --main-nav-color: #1e1e66;
-  --main-frm-color: #192350;
-  --header-color: #394566;
-  --menu-txt-color: #b8e5f0;
-  --nav-color: #192850;
-  --nav-txt-color: #aed2db;
+  --main-frm-color: #193c50;
+  --header-color: #2a3546;
+  --menu-txt-color: #eff0b8;
+  --nav-color: #193c50;
+  --nav-txt-color: #c3f1ef;
   --pkt-bg-color: #fafcf8;
   --border-color: #a2aeaf;
   --card-bg-color: #fafcf8;
@@ -19,10 +19,12 @@
 
 body {
   font-family: 'Verdana';
+  height: 100vh;
 }
 
 /* Style the grid */
 .grid-header {
+  grid-column: 1 / -1;
   display: grid;
   gap: 5px;
   background-color: var(--header-color);
@@ -33,10 +35,16 @@ body {
 .grid-item {
   background-color: var(--header-color);
   text-align: left;
+  display: grid;
   padding: 10px;
   font-family: 'Verdana';
   font-size: 10px;
   color: var(--menu-txt-color);
+}
+
+.packet-area {
+    height: 100%;
+    overflow-y: auto; /* Enable vertical scrollbar */
 }
 
 .item1 {
@@ -119,13 +127,18 @@ header {
   font-size: 10px;
 }
 
+/* Nav styling */
+.scroll-nav {
+  overflow-y: auto; /* Enables horizontal scroll */
+}
+
 /* Create two columns/boxes that floats next to each other */
 nav {
   background-color: var(--nav-color);
   float: left;
   padding: 20px;
   width: 25%;
-  height: 600px;
+  height: 100%;
   word-wrap: break-word;
   margin-right: 20px;
   overflow-x: auto; /* Show horizontal scrollbars */ 
@@ -135,6 +148,7 @@ nav {
 /* Style the list inside the menu */
 nav ul {
   list-style-type: none;
+  height: auto;
   padding: 0;
 }
 

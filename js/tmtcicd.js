@@ -7,7 +7,7 @@ var xmlhttp;
   
 
 ////////////////////////////////////////////////////////////////////////
-// LISTENER
+// EVENT LISTENERs
 ////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Initialize XML once DOM is ready
@@ -88,41 +88,6 @@ function showTab(tabId, button) {
     }
 }
 
-// RESIZE SIDEBAR
-//  - resize the side bar
-const resizer = document.getElementById('resizer');
-const sidebar = document.getElementById('sidebar');
-
-let isResizing = false;
-
-// 1. Detect mouse press on the resizer
-resizer.addEventListener("mousedown", (e) => {
-    isResizing = true;
-    document.body.style.cursor = "col-resize"; // Keeps the resizer cursor active
-    document.body.style.userSelect = "none";   // Prevents text selection while dragging
-});
-// 2. Adjust sidebar width as the mouse moves
-document.addEventListener("mousemove", (e) => {
-    if (!isResizing) return;
-    
-    // Set sidebar width based on the current horizontal mouse position
-    let newWidth = e.clientX;
-
-    // Optional bounds: keep sidebar between 150px and 600px
-    if (newWidth >= 150 && newWidth <= 600) {
-        sidebar.style.width = `${newWidth}px`;
-    }
-});
-// 3. Stop resizing when mouse click is released
-document.addEventListener("mouseup", () => {
-    if (isResizing) {
-        isResizing = false;
-        document.body.style.cursor = "default";
-        document.body.style.userSelect = "auto";
-    }
-});
-
-
 // UPDATE ARTICLE:
 //  - this is the function called when a packet link is clicked in the sidebar
 function updateArticle(type, stype) 
@@ -146,6 +111,7 @@ function updateArticle(type, stype)
     {  
       document.getElementById("packet-name").innerHTML = '<strong>PACKET: </strong>' + pktList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
       document.getElementById("packet-desc").innerHTML = '<strong>DESCRIPTION: </strong>' + pktList[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;      
+      document.getElementById('packet-img').innerHTML = '<img src="img/PUS packet[todo].png" alt="Packet TODO">';
       found = true;
       break;
     } // end if

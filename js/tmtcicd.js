@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
 ////////////////////////////////////////////////////////////////////////
 // FUNCTIONS
 ////////////////////////////////////////////////////////////////////////
@@ -109,9 +111,15 @@ function updateArticle(type, stype)
 
     if ((pktType == type)&&(pktSubtype == stype))
     {  
+      var pktImg = "img/PUSpkt_" + pktType + "_" + pktSubtype + ".png"; 
+      var img = document.createElement("img");
       document.getElementById("packet-name").innerHTML = '<strong>PACKET: </strong>' + pktList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
       document.getElementById("packet-desc").innerHTML = '<strong>DESCRIPTION: </strong>' + pktList[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;      
-      document.getElementById('packet-img').innerHTML = '<img src="img/PUS packet[todo].png" alt="Packet TODO">';
+      img.src = pktImg;
+      img.alt = "PUS packet diagram - TODO";
+      document.getElementById("packet-img").innerHTML = "";
+      document.getElementById("packet-img").appendChild(img);
+
       found = true;
       break;
     } // end if

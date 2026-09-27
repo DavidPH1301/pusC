@@ -10,8 +10,8 @@
 <body>
 
 <div class="header">
-    <p><strong>ECSS-E-ST-70-41C rev.1     /</strong></p>
-    <p>/     Telemetry and Telecommand Packet Utilization Services (PUS)</p>
+    <p><strong>ECSS-E-ST-70-41C rev.1      |</strong></p>
+    <p>|       Telemetry and Telecommand Packet Utilization Services (PUS)</p>
 </div>
 
 <div class="main">
@@ -618,6 +618,33 @@
     );
   } /* end for */
 </script>  
+
+<script>
+    const resizer = document.getElementById('resizer');
+    const sidebar = document.getElementById('sidebar');
+
+    let isResizing = false;
+
+    resizer.addEventListener('mousedown', () => {
+        isResizing = true;
+        document.body.style.cursor = 'col-resize';
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isResizing) return;
+
+        const newWidth = e.clientX;
+
+        if (newWidth >= 200 && newWidth <= 800) {
+            sidebar.style.width = newWidth + 'px';
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isResizing = false;
+        document.body.style.cursor = 'default';
+    });
+</script>
 
 <script src="js/tmtcicd.js">
 </script> 

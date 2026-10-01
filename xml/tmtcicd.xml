@@ -94,7 +94,7 @@
   <name>TC[2,1] distribute on/off device commands</name>
   <type>2</type>
   <stype>1</stype>
-  <description>TBD</description>
+  <description>This request distributes one or more on/off commands</description>
   <parameter>
     <param-name>Number of Commands (N)</param-name>
     <param-type>UINT</param-type>
@@ -113,28 +113,28 @@
   <name>TC[2,2] distribute register load commands</name>
   <type>2</type>
   <stype>2</stype>
-  <description>TBD</description>
+  <description>This request distributes one or more commands to load a register</description>
 </packet>
 
 <packet category="telecommand">
   <name>TC[2,4] distribute CPDU commands</name>
   <type>2</type>
   <stype>4</stype>
-  <description>TBD</description>
+  <description>This request distributes one or more CPDU commands</description>
 </packet>
 
 <packet category="telecommand">
   <name>TC[2,5] distribute register dump commands</name>
   <type>2</type>
   <stype>5</stype>
-  <description>TBD</description>
+  <description>This request distributes one or more commands to dump register content</description>
 </packet>
 
 <packet category="telemetry">
   <name>TM[2,6] register dump report</name>
   <type>2</type>
   <stype>6</stype>
-  <description>TBD</description>
+  <description>This report contains the dump of the registers previously requested with TC[2,5]</description>
 </packet>
 
 <packet category="telecommand">

@@ -113,7 +113,7 @@ function updateArticle(type, stype)
     {  
       var pktImg = "img/PUSpkt_" + pktType + "_" + pktSubtype + ".png"; 
       var img = document.createElement("img");
-      document.getElementById("packet-name").innerHTML = '<strong>PACKET: </strong>' + pktList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+      document.getElementById("packet-name").innerHTML = '<strong>NAME: </strong>' + pktList[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
       document.getElementById("packet-desc").innerHTML = '<strong>DESCRIPTION: </strong>' + pktList[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;      
       img.src = pktImg;
       img.alt = "PUS packet diagram - TODO";
@@ -126,7 +126,7 @@ function updateArticle(type, stype)
 } // end for
 
   if (!found) {
-      document.getElementById("packet-name").innerHTML = '<strong>PACKET: </strong>Not found';
+      document.getElementById("packet-name").innerHTML = '<strong>NAME: </strong>Not found';
       document.getElementById("packet-desc").innerHTML = '<strong>DESCRIPTION: </strong>Not found';
   }
 
